@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume-Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  
+  <form id="userForm">
+    <div class="wrapper-1">
+      <div class="profile-sec">
+        <h2>Profile</h2>
+        <label for="profilePic">Profile Picture URL:</label>
+        <input type="file" id="profilePic" placeholder="Enter image" accept="accept="image/jpeg, image/png, image/jpg" />
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" placeholder="Enter your profession" />
+      </div>
+
+      <div class="contact-data">
+        <h2>Contact</h2>
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" placeholder="Enter contact number" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email" />
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Enter address" />
+        <br />
+        <label for="website">Website:</label>
+        <input type="url" id="website" placeholder="Enter website URL" />
+      </div>
+    </div>
+
+    <div class="hobbies-data">
+      <h2>Hobbies</h2>
+      <label for="hobby1">Hobby 1:</label>
+      <input type="text" id="hobby1" placeholder="Enter hobby 1" />
+      <label for="hobby2">Hobby 2:</label>
+      <input type="text" id="hobby2" placeholder="Enter hobby 2" />
+      <label for="hobby3">Hobby 3:</label>
+      <input type="text" id="hobby3" placeholder="Enter hobby 3" />
+    </div>
+    </div>
+
+    <div class="edu-sec">
+      <div class="edu-year ">
+      <h2>Education</h2>      
+        <label for="edu1-year">Passing Year 1:</label>
+        <input type="text" id="edu1" placeholder="Enter year" />
+        <label for="edu2-year">Passing Year 2:</label>
+        <input type="text" id="edu2" placeholder="Enter year" />
+        <label for="edu3-year">Passing Year 3:</label>
+        <input type="text" id="edu3" placeholder="Enter year" />
+      </div>
+      <div class="edu-inst">
+        <label for="edu1">Institute 1:</label>
+        <input type="text" id="edu4" placeholder="Enter institute name" />
+        <label for="edu2">Institute 2:</label>
+        <input type="text" id="edu5" placeholder="Enter institute name" />
+        <label for="edu3">Institute 3:</label>
+        <input type="text" id="edu6" placeholder="Enter institute name" />
+      </div>
+    </div>
+
+    <div class="exp-sec">
+      
+      <div class="work-year">
+        <h2>Experience</h2>
+        <label for="exp1">Work Year 1:</label>
+        <input type="text" id="exp1" placeholder="Enter work period" />
+        <label for="exp2">Work Year 2:</label>
+        <input type="text" id="exp2" placeholder="Enter work period" />
+        <label for="exp3">Work Year 3:</label>
+        <input type="text" id="exp3" placeholder="Enter work period" />
+      </div>
+      <div class="comp-name">
+        <label for="exp1">Company 1:</label>
+        <input type="text" id="exp4" placeholder="Enter company name" />
+        <label for="exp2">Company 2:</label>
+        <input type="text" id="exp5" placeholder="Enter company name" />
+        <label for="exp3">Company 3:</label>
+        <input type="text" id="exp6" placeholder="Enter company name" />
+      </div>
+    </div>
+
+    <div class="skills-sec">
+      <div class="skills-left">
+      <h2>Skills</h2>
+      <label for="skill1">Skill 1:</label>
+      <input type="text" id="skill1" placeholder="Enter skill 1" />
+      <label for="skill2">Skill 2:</label>
+      <input type="text" id="skill2" placeholder="Enter skill 2" />
+      <label for="skill3">Skill 3:</label>
+      <input type="text" id="skill3" placeholder="Enter skill 3" />
+    </div>
+    <div class="skills-right">
+      <label for="skill1">Skill 4:</label>
+      <input type="text" id="skill4" placeholder="Enter skill 4" />
+      <label for="skill2">Skill 5:</label>
+      <input type="text" id="skill5" placeholder="Enter skill 5" />
+      <label for="skill3">Skill 6:</label>
+      <input type="text" id="skill6" placeholder="Enter skill 6" />
+    </div>
+    </div>
+
+    <button type="button" id="submitForm">Submit</button>
+  </form>
+
+
+  <!-- Resume layout -->
+
+  <div class="main hidden" id="output">
+    <div class="left-side">
+      
+        <div class="profile-image">
+          <img src="" alt="" id="profile-img" />
+        </div>
+     
+      <span id="intro">Hello I am ...</span>
+      <div class="title">
+        <h1 id="outName"></h1>
+        <p id="professionOut" contenteditable="true"></p>
+      </div>
+      <div class="contact-details">
+        <div class="contact" contenteditable="true">
+          <i class="bx bxs-contact"></i>
+          <h1>CONTACT</h1>
+        </div>
+        <div class="details">
+          <p id="cont-no" contenteditable="true">
+            <i class="bx bx-mobile"></i>
+            
+          </p>
+          <p id="emailOut" contenteditable="true">
+            <i class="bx bx-envelope"></i>
+
+          </p>
+          <p id="addressOut" contenteditable="true">
+            <i class="bx bx-location-plus"></i>
+
+          </p>
+          <p id="webOut" contenteditable="true">
+            <i class="bx bx-globe"></i>
+
+          </p>
+        </div>
+      </div>
+      <div class="hobbies-details">
+        <div class="hobbies">
+          <img src="./hobbies.png" alt="" />
+          <h1>HOBBIES</h1>
+        </div>
+        <div class="hobbies-content">
+          <p id="hobby-1" contenteditable="true"></p>
+          <p id="hobby-2" contenteditable="true"></p>
+          <p id="hobby-3" contenteditable="true"></p>
+          <p id="hobby-4" contenteditable="true"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Section Ends Here -->
+
+    <!-- Right Section Starts Here -->
+
+    <div class="right-side">
+      <div class="education">
+        <div class="edu">
+          <p id="title-tag">EDUCATION</p>
+          <div class="edu-data">
+            <div class="left">
+              <p id="edu-left-1"></p>
+              <p id="edu-left-2"></p>
+              <p id="edu-left-3"></p>
+            </div>
+            <div id="center"></div>
+            <div class="right">
+              <h2 id="inst"></h2>
+              <p id="data-right" ></p>
+              <h2 id="inst"></h2>
+              <p id="data-right" ></p>
+              <h2 id="inst"></h2>
+              <p id="data-right" ></p>
+            </div> 
+          </div>
+          <span id="edu-icon">
+            <i class="bx bxs-graduation"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="experience">
+        <div class="exp">
+          <p id="title-tag">EXPERIENCE</p>
+          <div class="exp-data">
+            <div class="left">
+              <p id="data-left"></p>
+              <p id="data-left"></p>
+              <p id="data-left"></p>
+            </div>
+            <div id="center"></div>
+            <div class="right">
+              <h2 id="comp"></h2>
+              <p id="data-right"></p>
+              <h2 id="comp"></h2>
+              <p id="data-right"></p>
+              <h2 id="comp"></h2>
+              <p id="data-right"></p>
+            </div>
+          </div>
+          <span id="exp-icon">
+            <img src="experience.png" alt="" />
+          </span>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <p id="title-tag">SKILLS</p>
+          <div class="skill-data">
+            <div class="left">
+              <p id="data-left"></p>
+              <p id="data-left"></p>
+              <p id="data-left"></p>
+            </div>
+            <div id="center"></div>
+            <div class="right">
+              <p id="data-right"></p>
+              <p id="data-right"></p>
+              <p id="data-right"></p>
+            </div>
+          </div>
+          <span id="skill-icon">
+            <img src="skills.png" alt="">
+          </span>
+        </div>
+
+    </div>
+
+      <script src="script.js"></script>
+    </div>
+  </div>
+</body>
+
+</html>
